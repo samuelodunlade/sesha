@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> @yield("title", 'SeSha: We listen, we dont judge')</title>
+
+    @section('metadata')
+    {{-- twitter Card --}}
+    {{-- social metadata --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sesha - Share & Read Secrets Anonymously">
+    <meta name="twitter:description" content="Whisper your secrets. Read others' truths. 100% anonymous, no traces left.">
+    <meta name="twitter:image" content="https://sesha.website/assets/images/social-preview-secrets.jpg">
+    {{-- og --}}
+    <meta property="og:title" content="Sesha - Share & Read Secrets Anonymously">
+    <meta property="og:description" content="Whisper your secrets. Read others' truths. 100% anonymous, no traces left.">
+    <meta property="og:url" content="https://sesha.website">
+    <meta property="og:image" content="https://sesha.website/assets/images/social-preview-secrets.jpg">
+    <meta property="og:type" content="website">
+  {{-- seo --}}
+    <meta name="title" content="Sesha -Anonymous Confessions & Secrets">
+    <meta name="description" content="A hidden space to share and read secrets, confessions, and anonymous messages. No accounts, no tracking, just raw truth.">
+    <meta name="keywords" content="anonymous confessions, secret sharing, read secrets online, anonymous messages, no-log platform, private confessions, whisper secrets">
+    @show
+
+
     <link rel="stylesheet" href="{{asset('/assets/fontawesome-free-6.6.0-web/css/all.min.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
