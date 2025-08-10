@@ -1,0 +1,264 @@
+
+:root {
+    --primary-color: #020822ff;
+    --secondary-color: #507dbc;
+    --text-color: #fffffcff;
+  }
+
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Roboto", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+a{
+    text-decoration: none;
+    font-family: "Roboto", serif;
+}
+
+.pry-bg,.bg-primary{
+    background-color: var(--primary-color) !important;
+}
+
+.sec-bg{
+    background-color: var(--secondary-color);
+}
+
+.alt-bg{
+    background-color: var(--text-color);
+}
+
+.pry-text{
+    color: var(--primary-color);
+}
+
+.sec-text{
+    color: var(--secondary-color);
+}
+
+.alt-text{
+    color: var(--text-color);
+}
+
+
+
+/* nav area styling begins */
+.nav_area{
+    background-color: var(--primary-color);
+    padding: 10px;
+    color: var(--secondary-color) !important;
+}
+
+.nav_area .navbar-brand{
+    color: var(--secondary-color) !important;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav_area .nav-link{
+    color: var(--secondary-color) !important;
+    font-weight: bold;
+}
+
+.navbar-nav .dropdown-menu {
+    color: var(--secondary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+  }
+
+  .hamburger-icon span {
+    display: block;
+    height: 3px;
+    background-color: #3498db;
+    border-radius: 5px;
+  }
+
+  .custom-toggler {
+    border: none;
+    padding: 0;
+  }
+
+  .custom-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+/* nav area styling begins */
+
+/* hero area styling begins */
+  .hero{
+    background-image: url("../images/secret.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .hero .mycont{
+    background-color:rgba(2, 8, 34, 0.9);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: var(--text-color);
+  }
+/* hero area styling begins */
+/* main area styling goes here */
+.main{
+    background-color: var(--main-color);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+
+.main .main-h2{
+    color: var(--primary-color);
+}
+
+.shi-box{
+    border: 1px solid var(--primary-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 
+      0 4px 6px rgba(2, 8, 34, 0.2), 
+      0 8px 20px rgba(2, 8, 34, 0.15);
+    transition: .5s all ease-in-out;
+}
+
+.shi-box:hover{
+    border: 2px solid rgba(2, 8, 34, 0.8);
+    box-shadow: 
+      0 8px 10px rgba(2, 8, 34, 0.3), 
+      0 16px 40px rgba(2, 8, 34, 0.25);
+}
+
+.shi-box h3{
+    color: var(--secondary-color);
+}
+
+.shi-box .tag-container{
+    padding: 10px;
+
+}
+
+.shi-box .tag-container .mytag{
+    display: inline-block;
+    margin: 3px;
+    font-size: 0.5em;
+}
+
+.shi-box .tag-container .mytag a{
+    color: white;
+    text-decoration: underline;
+}
+
+.shi-box .shi-main{
+    flex: 5;
+}
+
+.shi-box .shi-stat{
+    flex: 1;
+}
+.shi-box .shi-stat p{
+    text-align: right;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+.shi-box .shi-stat i{
+    flex: 1;
+}
+.shi-box .shi-stat span{
+    flex: 4;
+}
+
+.shi-cat-box{
+    padding: 20px;
+}
+
+/* media query */
+
+@media screen and (max-width: 460px){
+    .main{
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+
+    .shi-box{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 10px;
+    }
+
+    .shi-box:hover{
+    border: none;
+    box-shadow: none;
+}
+    .shi-box .shi-stat p{
+        display: inline-block;
+        padding: 20px 0px;
+    }
+
+}
+
+/* main area styling ends here */
+
+/* footer area styling begins here */
+.footer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--primary-color);
+} 
+
+.footer .myrow .footerbox{
+    background-color: var(--text-color);
+    padding: 20px;
+}
+
+.footer .myrow{
+    margin-bottom: 50px;
+}
+
+/* footer area styling ends here */
+
+/* 
+    #####################################
+    Shi Insertion Page styling
+    #####################################
+
+*/
+
+/* form area */
+
+.shi-form{
+    padding: 20px;
+    padding-bottom: 70px;
+}
+
+.shi-form  label{
+    color: var(--primary-color) !important;
+    font-weight: 900;
+    
+}
+
+
+
+
+
+
+
+
