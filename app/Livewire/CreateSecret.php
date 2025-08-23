@@ -24,6 +24,13 @@ class CreateSecret extends Component
     public $expirationOptions;
     public $expires_at;
 
+    
+    protected $listeners = ['editorUpdated' => 'updateContent'];
+    
+    public function updateContent($value)
+    {
+        $this->content = $value;
+    }
 
         public function mount()
     {

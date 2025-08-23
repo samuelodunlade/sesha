@@ -51,9 +51,11 @@
         <div class="row mb-3">
             <label for="content" class="col-sm-3 col-form-label">Shi Content</label>
             <div class="col-sm-9">
-                <textarea name="content" id="content" class="form-control" rows="6" 
-                placeholder="
-                It all began one morning while I was taking bath...."  wire:model='content'></textarea>
+                <div wire:ignore>
+                    <textarea name="content" id="content" class="form-control" rows="6" 
+                    placeholder="
+                    It all began one morning while I was taking bath...."  wire:model='content'></textarea>
+                </div>
                 @error("content")
                 <div class="alert alert-danger mt-2">
                     {{$message}}
@@ -84,3 +86,28 @@
         </div>
     </form>
 </div>
+
+
+@section("scripts")
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.js"></script>
+<script>
+    $(document).ready(function(){
+         $('#content').summernote({
+        placeholder: 'Hello stand alone ui',
+        tabsize: 2,
+        height: 120,
+        toolbar: [
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['view', ['fullscreen']]
+        ],
+        callbacks: {
+                onChange: function(contents, $editable) {
+                    @this.set('content', contents); // Update Livewire property
+                }
+            }
+      });
+    })
+</script>
+@endsection

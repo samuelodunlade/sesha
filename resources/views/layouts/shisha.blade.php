@@ -35,6 +35,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-lite.min.css" rel="stylesheet">
     <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
@@ -77,6 +78,14 @@
                       <li class="nav-item">
                         <a class="nav-link" href="{{ route('shisha.terms') }}">Terms</a>  
                       </li>
+
+                      @auth
+                        @if (auth()->user()->role == "admin")
+                          <li class="nav-item">
+                            <a class="nav-link" href="{{ route('dashboard') }}" target="_blank">Dashboard</a>  
+                          </li>
+                        @endif
+                      @endauth
                     </ul>
                   </div>
                 </div>
@@ -176,10 +185,11 @@
           });
         }
       });
-
+      
     </script>
     <script src="{{asset('/assets/js/jquery.js')}}"></script>
     <script src="{{asset('/assets/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    @yield("scripts")
     <script src="{{asset('/assets/js/main.js')}}"></script>
 </body>
 </html>

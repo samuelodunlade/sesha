@@ -29,7 +29,7 @@
             @endif
             <div class="card-body">
               <h5 class="card-title">{{ $secret->summary }} </h5>
-              <p class="card-text">{{ $secret->content }}</p>
+              <p class="card-text">{!! $secret->content !!}</p>
             </div>
             <h6 class="card-title p-3 text-danger"> Related Secrets </h6>
             <ul class="list-group list-group-flush">
