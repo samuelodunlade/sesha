@@ -34,7 +34,7 @@ class AppServiceProvider extends ServiceProvider
             if ($request->user()?->isAdmin()) {
                 return Limit::none();
             }else{
-                return Limit::perHour(2)->by($request->user()?->id ?: $request->ip());
+                return Limit::perHour(10)->by($request->user()?->id ?: $request->ip());
             }
             
         });
