@@ -59,6 +59,11 @@ return [
             'throw' => false,
             'report' => false,
         ],
+        'public_path' => [
+        'driver' => 'local',
+        'root' => public_path(),
+        'visibility' => 'public',
+         ],
 
     ],
 

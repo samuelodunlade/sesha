@@ -44,7 +44,7 @@ class AdminCategory extends Component
     {
         $this->validate();
 
-        $imagePath = $this->cover_image->store('categories', 'public');
+        $imagePath = $this->cover_image->store('categories', 'public_path');
 
         Category::create([
             'title' => $this->title,
@@ -107,7 +107,7 @@ class AdminCategory extends Component
         if ($this->cover_image) {
             // Delete old image
             Storage::disk('public')->delete($category->cover_image);
-            $data['cover_image'] = $this->cover_image->store('categories', 'public');
+            $data['cover_image'] = $this->cover_image->store('categories', 'public_path');
         }
 
         $category->update($data);

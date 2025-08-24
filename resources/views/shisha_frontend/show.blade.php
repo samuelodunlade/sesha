@@ -19,8 +19,8 @@
         {{-- bootstrap card --}}
         <div class="card">
             @if($secret->category->cover_image)
-            <img src="{{ asset('storage/'.$secret->category->cover_image) }}" 
-                alt="{{ $secret->category->title }} " 
+            <img src="{{ asset('/'.$secret->category->cover_image) }}" 
+                alt="{{ $secret->category->title }}" 
                 class="card-img-top">
             @else
                 <div class="bg-light d-flex align-items-center justify-content-center">

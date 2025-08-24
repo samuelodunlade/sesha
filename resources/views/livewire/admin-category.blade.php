@@ -41,6 +41,7 @@
                                         id="cover_image" 
                                         wire:model="cover_image" 
                                         class="form-control"
+                                        accept="image/*"
                                     >
                                     @error('cover_image') <div class="text-danger small">{{ $message }}</div> @enderror
                                 </div>
@@ -130,7 +131,7 @@
                                     <tr>
                                         <td>
                                             @if($category->cover_image)
-                                                <img src="{{ asset('storage/'.$category->cover_image) }}" 
+                                                <img src="{{ asset('/'.$category->cover_image) }}" 
                                                     alt="{{ $category->title }}" 
                                                     class="img-thumbnail" 
                                                     style="width: 60px; height: 60px; object-fit: cover">
